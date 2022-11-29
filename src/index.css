@@ -3,3 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-image: url(https://res.cloudinary.com/don3phnka/image/upload/v1669331129/Coca-Cola%20React%20js/fondo_coca_nflqia.jpg);
+}
+
+.fondoRojo {
+  color: white;
+  background-color: #d72300;
+}
+
+.padreFooter {
+  display: flex;
+  align-items: center;
+}
