@@ -23,7 +23,7 @@ const NavBar = () => {
                                     <a className="nav-link" href="/monster">Monster</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/accesorios">Accesorios</a>
+                                    <a className="nav-link" href="/accesorios">Jugos</a>
                                 </li>
                             </ul>
                         </div>
