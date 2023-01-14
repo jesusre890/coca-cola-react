@@ -6,24 +6,28 @@ import ItemDetailContainer from './componentes/ItemDetailContainer';
 import NavBar from "./componentes/NavBar";
 import BlackFriday from "./componentes/BlackFriday"
 import Error404 from './componentes/Error404';
+import CartContextProvider from './componentes/context/CartContext';
+import Cart from "./componentes/Cart";
 
 
 function App() {
   return (
-    <div className='container-fluid'>
-      <BrowserRouter>
-        <NavBar />
-        <Routes>
-          <Route path={"/"} element={<ItemListContainer />} />
-          <Route path={"/category/:id"} element={<ItemListContainer />} />
-          <Route path={"/item/:id"} element={<ItemDetailContainer />} />
-          <Route path={"*"} element={<Error404 />} />
-        </Routes>
-        <BlackFriday />
-        <Footer />
-      </BrowserRouter>
-
-    </div>
+    <CartContextProvider>
+          <div className='container-fluid'>
+            <BrowserRouter>
+              <NavBar />
+              <Routes>
+                <Route path={"/"} element={<ItemListContainer />} />
+                <Route path={"/category/:id"} element={<ItemListContainer />} />
+                <Route path={"/item/:id"} element={<ItemDetailContainer />} />
+                <Route path={"/cart"} element={<Cart />} />
+                <Route path={"*"} element={<Error404 />} />
+              </Routes>
+              <BlackFriday />
+              <Footer />
+            </BrowserRouter>
+          </div>
+    </CartContextProvider>
   );
 }
 
